@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&family=Roboto:wght@400;700&family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 
 :root {
-    --background: rgb(5, 3, 71);
+    --background: rgb(93, 28, 52);
     --accent: rgb(207, 183, 159);
 }
 @font-face {
@@ -137,7 +139,7 @@ section {
 
 .main-text {
     font-size: 108px; 
-    font-family: 'Newsreader', serif;
+    font-family: "GFS Didot", serif;
     font-weight: 700;
     line-height: 0.85;
     letter-spacing: 0.4rem;
@@ -163,7 +165,7 @@ section {
 
 /* Services Page Styles */
 .services-header {
-    font-family: 'Newsreader', serif;
+      font-family: "GFS Didot", serif;
     font-weight: 700;
     margin-bottom: 2rem;
 }
@@ -183,7 +185,7 @@ section {
 }
 
 .package h3 {
-    font-family: 'Newsreader', serif;
+      font-family: "GFS Didot", serif;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -200,7 +202,7 @@ section {
 
 /* About Page Styles */
 .about-header {
-    font-family: 'Newsreader', serif;
+      font-family: "GFS Didot", serif;
     font-weight: 700;
     margin-bottom: 2rem;
     margin-top: 10rem;
@@ -288,14 +290,14 @@ section {
 }
 
 .contact-header {
-    font-family: 'Newsreader', serif;
+      font-family: "GFS Didot", serif;
     font-weight: 700;
     color: #050347;
     margin-bottom: 2rem;
 }
 
 .booking-header {
-    font-family: 'Newsreader', serif;
+      font-family: "GFS Didot", serif;
     margin-top: 5rem;
     font-size: 5rem;
     font-weight: 700;
@@ -305,7 +307,7 @@ section {
 }
 
 .confirmation-header {
-    font-family: 'Newsreader', serif;
+      font-family: "GFS Didot", serif;
     font-weight: 700;
     color: var(--accent);
     margin-bottom: 2rem;
