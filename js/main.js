@@ -22,9 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const date = document.getElementById('date').value;
         const time = document.getElementById('time').value;
         const service = document.getElementById('service').value;
-        const expert = document.getElementById('expert').value;
+        
+        // Handle multiple experts
+        const expertElements = document.querySelectorAll('input[name="expert"]:checked');
+        const experts = Array.from(expertElements).map(expert => expert.value);
 
-        if (!firstName || !lastName || !email || !phoneNumber || !date || !time || !service || !expert) {
+        if (!firstName || !lastName || !email || !phoneNumber || !date || !time || !service || experts.length === 0) {
             alert('Please fill out all fields.');
             return;
         }
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('confirmDate').textContent = date;
         document.getElementById('confirmTime').textContent = time;
         document.getElementById('confirmService').textContent = service;
-        document.getElementById('confirmExpert').textContent = expert;
+        document.getElementById('confirmExpert').textContent = experts.join(', ');
 
         // Show confirmation section
         confirmation.style.display = 'block';
