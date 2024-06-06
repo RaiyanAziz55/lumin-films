@@ -283,6 +283,10 @@ section {
     background-color: var(--background);
 }
 
+.addr{
+    padding: 3rem;
+}
+
 .contact-header {
     font-family: 'Newsreader', serif;
     font-weight: 700;
