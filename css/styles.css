@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&family=Roboto:wght@400;700&family=Rozha+One&display=swap');
 
+:root {
+    --background: rgb(5, 3, 71);
+    --accent: rgb(207, 183, 159);
+}
 @font-face {
     font-family: 'AUR';
     src: url('../fonts/Bavex-jEwzl.ttf') format('opentype');
@@ -7,19 +11,17 @@
     font-style: normal;
 }
 
-.main-text {
-    font-size: 108px; 
-    font-family: "AUR";
-    font-weight: 700;
-    line-height: 0.85;
-    letter-spacing: 0.4rem;
-}
-
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    width: auto;
 }
 
 .navbar {
@@ -27,31 +29,39 @@ body {
     position: absolute;
 }
 
-.navbar .container{
-    display:flex;
+.navbar .container {
+    display: flex;
     flex-direction: column;
-    gap: -25px;
 }
 
+.navbar-light .navbar-toggler{
+    color: var(--accent); 
+    border-color: var(--accent); 
+}
+
+
+
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(255, 255, 255);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar .nav-link {
-    color: white;
     transition: all 0.3s;
 }
 
-.navbar-light .navbar-nav .nav-link.active{
-    color: rgb(255, 237, 190);
-    border-bottom: 2px solid rgb(255, 237, 190);
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
-.navbar-light .navbar-nav .nav-link:hover{
-    color: rgb(255, 237, 190);
-    
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--accent);
 }
 
+.footer-custom {
+    height: 10rem;
+    background-color: var(--accent);
+}
 
 .hero-image {
     background: url('../assets/1B4A9923.jpg') no-repeat center center;
@@ -66,13 +76,55 @@ body {
     color: white;
 }
 
-.hero-image .container {
+.hero-image-services {
+    background: url('../assets/Untitled-2.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image-about {
+    background: url('../assets/Untitled-1.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image-contact {
+    background: url('../assets/Screen Shot 2024-06-05 at 8.41.30 PM.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image .container,
+.hero-image-services .container,
+.hero-image-about .container,
+.hero-image-contact .container {
     margin: 3rem;
     width: 50%;
     z-index: 2;
 }
 
-.hero-image::after {
+.hero-image::after,
+.hero-image-services::after,
+.hero-image-about::after,
+.hero-image-contact::after {
     content: '';
     position: absolute;
     top: 0;
@@ -81,6 +133,14 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.0);
     z-index: 1;
+}
+
+.main-text {
+    font-size: 108px; 
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: 0.4rem;
 }
 
 .footer {
@@ -99,4 +159,280 @@ body {
 
 .footer p {
     margin: 0;
+}
+
+/* Services Page Styles */
+.services-header {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.list-pack{
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+.list-pack li{
+ font-size: large;
+}
+
+.package {
+    margin-bottom: 3rem;
+}
+
+.package h3 {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.package ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.package ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* About Page Styles */
+.about-header {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 3rem;
+}
+.img-container {
+    justify-self: center;
+    width: 100%;
+}
+.meet-text {
+    height: 10%;
+    color: rgb(207, 183, 159);
+}
+
+.meet-team {
+    margin-top: 3rem;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.parent-portait {
+    margin: 5rem;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 100px;
+    flex-wrap: nowrap;
+}
+
+.portait-container {
+    height: 600px;
+    width: 28%;
+}
+
+.portrait-text {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(207, 183, 159);
+}
+
+.portrait {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+    border: solid rgb(207, 183, 159);
+}
+
+/* Contact Page Styles */
+.hero-image-contact {
+    background: url('../assets/Untitled-3.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.booking {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: var(--background);
+}
+
+.contact-header {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    color: #050347;
+    margin-bottom: 2rem;
+}
+
+.booking-header {
+    font-family: 'Newsreader', serif;
+    margin-top: 5rem;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.confirmation-header {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bookbtn {
+    align-self: center;
+    width: 10%;
+}
+
+/* Contact Page Styles */
+
+.images{
+    height: auto;
+    padding: 3rem;
+    background-color: var(--background);
+   
+}
+.images div{
+    margin-top: 10rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .hero-image .container,
+    .hero-image-services .container,
+    .hero-image-about .container,
+    .hero-image-contact .container {
+        width: 70%;
+    }
+
+    .main-text {
+        font-size: 72px;
+    }
+
+    .navbar .container {
+        flex-direction: row;
+    }
+
+    .parent-portait {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .portait-container {
+        width: 80%;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .bookbtn {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image .container,
+    .hero-image-services .container,
+    .hero-image-about .container,
+    .hero-image-contact .container {
+        width: 90%;
+    }
+
+    .main-text {
+        font-size: 48px;
+    }
+
+    .navbar .container {
+        flex-direction: row;
+    }
+
+    .parent-portait {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .portait-container {
+        width: 100%;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .bookbtn {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-text {
+        font-size: 36px;
+    }
+
+    .parent-portait {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .portait-container {
+        width: 100%;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .bookbtn {
+        width: 100%;
+    }
+
+    .navbar-toggler.collapsed .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+
 }
